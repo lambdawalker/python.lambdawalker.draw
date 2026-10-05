@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lambdawalker-draw"
+version = "0.1.0"
+description = "Drawing and geometric generative design tools for LambdaWalker"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "LambdaWalker", email = "lambdawalker@isdavid.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "lambdawalker-list>=0.1.0",
+  "lambdawalker-log>=0.1.0",
+  "lambdawalker-random>=0.1.0",
+  "lambdawalker-reflection>=0.1.0",
+  "Pillow>=10.0.0",
+  "aggdraw>=1.4.1",
+  "cairosvg>=2.8.2",
+  "hsluv>=5.0.4",
+  "moderngl>=5.12.0",
+  "noise>=1.2.2",
+  "numpy>=2.0.0",
+  "opencv-python>=4.10.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/lambdawalker/python_lw_drawing_tools"
+Repository = "https://github.com/lambdawalker/python_lw_drawing_tools"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"lambdawalker.draw" = ["assets/**"]
